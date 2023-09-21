@@ -13,4 +13,5 @@ while True:
     client, addr = s.accept() # 연결혀용 , (client socket, rem_addr) 반환
     print("Connection requested from", addr)
     client.send(time.ctime(time.time()).encode()) # 현재 시간을 전송
-    client.close()
+    time.sleep(1)
+    # client.close()
