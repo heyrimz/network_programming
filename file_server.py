@@ -7,7 +7,7 @@ port = 2500
 # 서버 소켓 생성
 s_sock = socket.socket()
 host = ''
-s_sock.bind((host,port)) # 종단점과 소켓 결합, '임의주소'
+s_sock.bind((host,port))
 s_sock.listen(1)
 
 print("Wating for Connection")
