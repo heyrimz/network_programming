@@ -38,8 +38,8 @@ LED_button = Button(text=btn_text, fg='yellow', bg = btn_color, \
 
 LED_label.grid(row=0, column = 0)
 LED_button.grid(row=0, column =1)
-switch_label.grid(row=0, column = 0)
-switch_state_label.grid(row=0, column =1, sticky = E)
+switch_label.grid(row=1, column = 0)
+switch_state_label.grid(row=1, column =1, sticky = E)
 
 sock = socket()
 sock.connect(("localhost", 2500))
