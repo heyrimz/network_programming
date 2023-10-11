@@ -10,7 +10,7 @@ s_sock.bind(('localhost',port))
 s_sock.listen(5)
 sock_list.append(s_sock)
 
-print("Server wating on port"+str(port))
+print("Server wating on port "+str(port))
 
 while True:
     r_sock, w_sock, e_sock = select.select(sock_list,[],[])
