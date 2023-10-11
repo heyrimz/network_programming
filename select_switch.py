@@ -43,4 +43,5 @@ switch_state_label.grid(row=0, column =1, sticky = E)
 
 sock = socket()
 sock.connect(("localhost", 2500))
+handle()
 mainloop()
