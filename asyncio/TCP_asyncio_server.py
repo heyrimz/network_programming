@@ -16,11 +16,12 @@ async def handel_echo(reader, writer):
     await writer.wait_closed()
 
 async def main():
-    sever = await asyncio.start_server(handel_echo,'127.0.0.1',2355)
-    addrs = ', '.join(str(sock.getsockname()) for sock in sever.sockets())
-    print(f"Serving on {addrs}")
+    server = await asyncio.start_server(handel_echo, '127.0.0.1', 2355)
 
-    async with sever:
-        await sever.serve_forever()
+    addrs = ', '.join(str(sock.getsockname()) for sock in server.sockets)
+    print(f'Serving on {addrs}')
+
+    async with server:
+        await server.serve_forever()
 
 asyncio.run(main())
