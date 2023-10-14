@@ -12,10 +12,6 @@ def count_minus():
     count -= 1
     label.config(text=str(count))
 
-root = Tk()                           # TK인스턴스 생성
-
-label = Label(root,text="0")
-label.pack()
 
 button1 = Button(root, width=10,text='plus',overrelief='solid', command=count_plus)
 button1.pack()
