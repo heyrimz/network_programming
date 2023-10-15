@@ -36,6 +36,7 @@ message_label.grid(row=0, column = 0, sticky = W)
 recv_label.grid(row=1, column = 0, sticky = W)
 entry1.grid(row=0, column = 1)
 entry2.grid(row=1, column = 1)
+calc_button.grid(row=0, column = 2,padx = 10, pady = 10)
 
 # 데이터 수신을 위한 스레드 생성과 실행
 cThread = threading.Thread(target=handler, args=(sock,))
